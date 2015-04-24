@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <GL/glut.h>
-#include <SOIL/SOIL.h>
 
 #define TEXURE_PATH "image.raw"
 #define WIDTH   256
@@ -17,7 +16,7 @@ int main(int argc, char **argv)
 {
     // Glut initial setup
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize(500, 500);
     glutInitWindowPosition(0, 0);
     glutCreateWindow("OpenGL textures");
@@ -60,7 +59,6 @@ void display()
     glEnd();
 
     glFlush();
-    glutSwapBuffers();
 }
 
 /*
